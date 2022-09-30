@@ -20,7 +20,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class SacolaServiceImpl implements SacolaService {
-
     private final SacolaRepository sacolaRepository;
     private final ProdutoRepository produtoRepository;
     private final ItemRepository itemRepository;
@@ -48,6 +47,8 @@ public class SacolaServiceImpl implements SacolaService {
         para só então adicionar itens do novo restaurante.
         Aqui será feita essa validação:
         */
+
+
         List<Item> itensDaSacola = sacola.getItens();
         if(itensDaSacola.isEmpty()) {
             itensDaSacola.add(itemParaSerInserido);
